@@ -1,0 +1,19 @@
+{
+  "name": "proton-template-app",
+  "version": "1.0.0",
+  "description": "A simple template app for Proton",
+  "main": "app.js",
+  "author": "Connor Sears",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^1.4.15",
+    "ipc": "^0.0.1",
+    "nodemon": "^1.11.0",
+    "serialport": "^4.0.7"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^1.5.7"
+  }
+}

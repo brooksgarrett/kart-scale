@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kart Scale Title</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/photon.css">
+    <link rel="stylesheet" href="./css/app.css">
+
+    <!-- Javascript -->
+    <script src="js/menu.js" charset="utf-8"></script>
+    <script src="js/scale.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="window">
+
+      <!-- .toolbar-header sits at the top of your app -->
+      <header class="toolbar toolbar-header">
+        <h1 class="title">Kart Scale</h1>
+      </header>
+
+      <!-- Your app's content goes inside .window-content -->
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane pane-sm sidebar">
+            <nav class="nav-group">
+              <h5 class="nav-group-title">Top Menu</h5>
+              <span class="nav-group-item" onClick="ipcRenderer.send('navigation', 'configure');">
+                <span class="icon icon-cog"></span>
+                Configure
+              </span>
+              <span class="nav-group-item" onClick="ipcRenderer.send('navigation', 'Weigh');">
+                <span class="icon icon-traffic-cone"></span>
+                Weigh
+              </span>
+            </nav>
+          </div>
+
+          <div class="pane">
+            <button class="btn btn-positive" id="scale-control" command="start">Start</button>
+            <table class="table-striped">
+              <thead>
+                <tr>
+                  <th>Corner</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Left Front</td>
+                  <td id="scale-LF"></td>
+                </tr>
+                <tr>
+                  <td>Right Front</td>
+                  <td id="scale-RF"></td>
+                </tr>
+                <tr>
+                  <td>Left Rear</td>
+                  <td id="scale-LR"></td>
+                </tr>
+                <tr>
+                  <td>Right Rear</td>
+                  <td id="scale-RR"></td>
+                </tr>
+                <tr>
+                  <td>Left Side</td>
+                  <td id="scale-LS"></td>
+                </tr>
+                <tr>
+                  <td>Right Side</td>
+                  <td id="scale-RS"></td>
+                </tr>
+                <tr>
+                  <td>Front</td>
+                  <td id="scale-FT"></td>
+                </tr>
+                <tr>
+                  <td>Rear</td>
+                  <td id="scale-RE"></td>
+                </tr>
+                <tr>
+                  <td>Front Bias</td>
+                  <td id="scale-FB"></td>
+                </tr>
+                <tr>
+                  <td>Rear Bias</td>
+                  <td id="scale-RB"></td>
+                </tr>
+                <tr>
+                  <td>Cross</td>
+                  <td id="scale-CR"></td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td id="scale-TO"></td>
+                </tr>
+                <tr>
+                  <td>Total Selected</td>
+                  <td id="scale-TS"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

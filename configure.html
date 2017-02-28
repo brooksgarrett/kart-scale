@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kart Scale Title</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/photon.css">
+    <link rel="stylesheet" href="./css/app.css">
+
+    <!-- Javascript -->
+    <script src="js/menu.js" charset="utf-8"></script>
+    <script src="js/configure.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div class="window">
+
+      <!-- .toolbar-header sits at the top of your app -->
+      <header class="toolbar toolbar-header">
+        <h1 class="title">Kart Scale</h1>
+      </header>
+
+      <!-- Your app's content goes inside .window-content -->
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane pane-sm sidebar">
+            <nav class="nav-group">
+              <h5 class="nav-group-title">Top Menu</h5>
+              <span class="nav-group-item" onClick="ipcRenderer.send('navigation', 'configure');">
+                <span class="icon icon-cog"></span>
+                Configure
+              </span>
+              <span class="nav-group-item" onClick="ipcRenderer.send('navigation', 'weigh');">
+                <span class="icon icon-traffic-cone"></span>
+                Weigh
+              </span>
+            </nav>
+          </div>
+
+          <div class="pane">
+              <ul id="port-list">
+                
+              </ul>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
