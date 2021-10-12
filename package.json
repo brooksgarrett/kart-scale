@@ -8,7 +8,7 @@
     "start": "electron ."
   },
   "dependencies": {
-    "electron": "^1.4.15",
+    "electron": "^11.5.0",
     "ipc": "^0.0.1",
     "nodemon": "^1.11.0",
     "serialport": "^4.0.7"
